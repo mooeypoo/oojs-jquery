@@ -1,0 +1,136 @@
+<html>
+	<head>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript" src="oojs.jquery.js"></script>
+<script type="text/javascript" src="jQuery.clippable.js"></script>
+<script type="text/javascript" src="oojs-ui-core-jqueryplugin.js"></script>
+
+<script type="text/javascript" src="lib/oojs-ui/dist/oojs-ui-wikimediaui.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/oojs-ui/dist/oojs-ui-wikimediaui.css"/>
+
+<script type="text/javascript">
+	$( document ).ready( function () {
+		// jQuery plugin clippable
+		$( '.clippable' ).clippable( {
+			width: 300,
+		} );
+
+		// OOUI clippable
+		var popup = new OO.ui.PopupWidget( {
+			$content: $( '.ooui-clippable-content' ),
+			width: 300,
+			$footer: $( '<div>' )
+				.addClass( 'ooui-clippable-footer' )
+				.text( 'This is a footer' )
+		} );
+		$( '.ooui-clippable' ).append( popup.$element );
+
+		popup.toggle( true );
+	} );
+
+</script>
+
+	<style>
+		.wrapper {
+			margin: 0;
+			position: absolute;
+			top: 20%;
+		}
+		.clippable {
+			border: 1px solid #666;
+			overflow: scroll;
+		}
+
+		.ooui-clippable-content div,
+		.clippable div {
+			display: block;
+			padding: 2em;
+			border-bottom: 1px solid #000;
+		}
+
+		.ooui-clippable {
+			float: right;
+			margin-left: 15em;
+			border: 1px solid #333;
+		}
+
+		.ooui-clippable-footer {
+			background: #ccc;
+		}
+	</style>
+	</head>
+	<body>
+
+	<div class="wrapper">
+		<div class="ooui-clippable"></div>
+
+		<div class="clippable">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+			<div>14</div>
+			<div>15</div>
+			<div>16</div>
+			<div>17</div>
+			<div>18</div>
+			<div>19</div>
+			<div>20</div>
+			<div>21</div>
+			<div>22</div>
+			<div>23</div>
+			<div>24</div>
+			<div>25</div>
+			<div>26</div>
+			<div>27</div>
+			<div>28</div>
+			<div>29</div>
+			<div>30</div>
+		</div>
+	</div>
+
+	<div style="display:none;">
+		<div class="ooui-clippable-content">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+			<div>14</div>
+			<div>15</div>
+			<div>16</div>
+			<div>17</div>
+			<div>18</div>
+			<div>19</div>
+			<div>20</div>
+			<div>21</div>
+			<div>22</div>
+			<div>23</div>
+			<div>24</div>
+			<div>25</div>
+			<div>26</div>
+			<div>27</div>
+			<div>28</div>
+			<div>29</div>
+			<div>30</div>
+		</div>
+	</div>
+	</body>
+</html>
